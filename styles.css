@@ -73,6 +73,21 @@ nav a {
     min-width: 250px;
     border-radius: 8px;
 }
+/* Sección de historia */
+.historia {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.historia article {
+    background: #f3f3f3;
+    padding: 1rem;
+    flex: 5;
+    min-width: 250px;
+    border-radius: 8px;
+}
 
 /* Footer */
 footer {
