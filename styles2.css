@@ -6,8 +6,12 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1;
     background: linear-gradient(#6379b1, #7e8596)
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: white;
 }
 
 /* Header */
@@ -23,12 +27,15 @@ nav {
     background: #222;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
-    padding: 1rem;
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        list-style: none;
+        padding: 1rem;
+        gap: 1rem;
 }
 
 nav a {
@@ -41,28 +48,27 @@ nav a {
 .galeria {
     padding: 2rem;
     text-align: center;
-    background-color: black;
+    background: black;
+    color: white;
     }
     
-.contenedor {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    height: 50px;          
-    font-size: 22px;
+.contenedor {         
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
+
 
 .contenedor-imagenes {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .contenedor-imagenes img {
     width: 100%;
-    height: 150px;
+    max-width: 150px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -71,37 +77,34 @@ hr {
 }
 /* Nuestros servicios */
 .nuestros-servicios {
-    margin-top: 20px;
     padding: 2rem;
     text-align: center;
-    background-color: black;
+    background: black;
+    color: white;
     }
-    
-.contenedor-servicios {
+
+    .contenedor-servicios {
     display: flex;
     justify-content: center;  
     align-items: center;     
-    height: 40px;           
+    height: 50px;           
     font-size: 22px;
 }
+    
 /* Sección de información */
 .info {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center; 
-    gap: 1rem;
-    padding: 1.2rem;
+    gap: 1.5rem;
 }
 
-animacion {
+.animacion {
     background: #4060b2;
     padding: 1.5rem;
     width: 90%;
-    border-radius: 12px;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    display: flex;
+    max-width: 250px;
+    border-radius: 8px;
     animation: mover 3s infinite;
 }
  @keyframes mover {
@@ -109,33 +112,23 @@ animacion {
           transform: translateY(0);
         }
         100% {
-          transform: translateY(30px);
+          transform: translateY(20px);
         }
       }
 
 /* Sección de historia */
 .historia {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    text-align: centers;
+    background: #2f4376;
+    padding: 1rem;
+    border-radius: 4px;
 }
 
-.contenedorhistoria {
+.historia article {
     display: flex;
     justify-content: center;  
     align-items: center;    
     height: 40px;           
     font-size: 20px;
-}
-
-.historia article {
-    background: #2f4376;
-    padding: 1rem;
-    flex: 2;
-    min-width: 50px;
-    border-radius: 4px;
 }
 
 /* Footer */
@@ -146,13 +139,10 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
-
-/* TABLET  600px */
-
-@media (min-width: 600px) {
-
+/*Tablet 600px */
+@media (min-width: 600px){
     nav ul {
-        flex-direction: row;
+        flex-direction: row; 
     }
 
     .contenedor-imagenes img {
@@ -160,18 +150,27 @@ footer {
         height: 130px;
     }
 
+    .contenedor-servicios {
+        height: 60px;
+        font-size: 26px;
+    }
+
     .info {
-        flex-direction: row; 
+        flex-direction: row;  
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .animacion {
-        width: 220px;
+        width: 200px;
+    }
+
+    .historia article {
+        max-width: 600px;
+        margin: auto;
     }
 }
 
-/* MONITOR 992px */
+/* Monitor 992px */
 
 @media (min-width: 992px) {
 
@@ -184,6 +183,11 @@ footer {
         height: 160px;
     }
 
+    .contenedor-servicios {
+        height: 80px;
+        font-size: 32px;
+    }
+
     .info {
         gap: 3rem;
     }
@@ -193,8 +197,14 @@ footer {
         padding: 2rem;
     }
 
+    .historia {
+        display: flex;
+        justify-content: center;
+    }
+
     .historia article {
         width: 50%;
         font-size: 1.2rem;
     }
+
 }
