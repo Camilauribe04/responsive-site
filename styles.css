@@ -184,7 +184,7 @@ footer {
 
 /* MONITOR 992px */
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 
     .galeria {
         padding: 4rem;
